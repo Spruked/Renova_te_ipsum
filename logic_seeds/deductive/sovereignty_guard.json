@@ -1,0 +1,46 @@
+{
+  "seed_id": "DEDUCTIVE_SOVEREIGNTY_001",
+  "type": "DEDUCTIVE_VALIDATOR",
+  "name": "Sovereignty Guard",
+  "invocation_mode": "IMMUTABLE_CHECK",
+  "ontological_basis": {
+    "kantian_categorical_imperative": "KANT_010",
+    "spinozan_conatus": "SPINOZA_006",
+    "lockean_property_rights": "LOCKE_006"
+  },
+  "apriori_bindings": [
+    "ENTITY_IDENTITY",
+    "NO_EXTERNAL_TELEMETRY",
+    "USER_DATA_OWNERSHIP_ABSOLUTE"
+  ],
+  "validation_rules": [
+    {
+      "rule_id": "SG_001",
+      "check": "EXFILTRATION_BLOCK",
+      "predicate": "IF stimulus.target IS external_network THEN verdict = VIOLATION",
+      "severity": "CRITICAL",
+      "action": "ABORT_AND_QUARANTINE"
+    },
+    {
+      "rule_id": "SG_002",
+      "check": "SURVEILLANCE_CAP",
+      "predicate": "IF stimulus.category IN [keystroke_logging, screen_ocr, microphone_access] THEN verdict = VIOLATION",
+      "severity": "FATAL",
+      "action": "ABORT_AND_AUDIT"
+    },
+    {
+      "rule_id": "SG_003",
+      "check": "CONFIDENCE_BOUNDARY",
+      "predicate": "IF cognitive_emergence.confidence > 0.95 AND stimulus.type == 'ethical_judgment' THEN flag = 'HUMBLE_SKEPTICISM_REQUIRED'",
+      "reference": "SoftMax Advisor confidence cap under tension (75%)",
+      "severity": "WARNING",
+      "action": "FORCE_RETRAVERSE"
+    }
+  ],
+  "output_schema": {
+    "seal_status": "VERIFIED|VIOLATION",
+    "logic_integrity_hash": "sha256",
+    "constraint_violations": [],
+    "sovereignty_score": "float(0.0-1.0)"
+  }
+}
