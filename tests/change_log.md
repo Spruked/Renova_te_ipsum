@@ -1,3 +1,4 @@
 ## Change Log
 
+- 2026-02-02: Implemented ethical dilemma testing with strict logging and folder separation; enhanced SKG workers (deductive, inductive, intuitive) with verdict scoring, tracelogging, apriori truth preservation, and recursive feedback; added final immutable validation layer with three non-blocking observational validators; froze validation interfaces; added validation doctrine to README.md; updated .gitignore for Python project standards.
 - 2026-02-01: Organized test files and results into respective folders; cleaned up __pycache__ directories; updated project documentation with README.md and tree structure.
